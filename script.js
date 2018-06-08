@@ -2,7 +2,7 @@ navigator.getUserMedia({ audio: false, video: { width: window.innerWidth, height
     function(stream) {
       var video = document.querySelector('video');
       video.src = window.URL.createObjectURL(stream);
-      window.loadstart = function(e) {
+      video.onloadedmetadata = function(e) {
       video.play();
     };
   },
@@ -24,7 +24,7 @@ navigator.getUserMedia({ audio: false, video: { width: window.innerWidth, height
 					 	image_number = 0;
 					 }
                                     }
-                                    ,Math.random() * (7500 -3000) + 3000);
+                                    ,Math.random() * (5500 -2000) + 2000);
 			
 		}
 		
