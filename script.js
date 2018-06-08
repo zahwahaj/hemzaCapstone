@@ -1,4 +1,4 @@
-navigator.mediaDevices.getUserMedia({ audio: false, video: { width: window.innerWidth, height: window.innerHeight } },
+navigator.getUserMedia({ audio: false, video: { width: window.innerWidth, height: window.innerHeight } },
     function(stream) {
       var video = document.querySelector('video');
       video.src = window.URL.createObjectURL(stream);
